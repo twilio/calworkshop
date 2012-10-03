@@ -152,6 +152,10 @@ for easy experimentation.
 Call Forwarding
 ---------------
 
+The `Dial`_ verb allows you to connect calls to other people. The following
+TwiML will forward any call to your Twilio phone number to your personal. Once
+you've wired up this TwiML to your number, get a neighbor to test it out. 
+
 .. code-block:: xml
 
     <?xml version="1.0" encoding="UTF-8"?>
@@ -164,6 +168,10 @@ Call Forwarding
 Voicemail
 ---------
 
+Recording audio is accomplished through the `Record`_ verb. The Record verb
+will play a beep and wait until a user presses # or hangs up. Copy this TwiML
+into your bin and save. You can now leave messages on your number.
+
 .. code-block:: xml
 
     <?xml version="1.0" encoding="UTF-8"?>
@@ -172,9 +180,20 @@ Voicemail
       <Record/>
     </Resposne>
 
+After you're done recording your message, hang up. Twilio begins processing the
+recording right after your done. Head to your `recording log
+<https://www.twilio.com/user/account/log/recordings>`_ to listen to your
+message.
+
 
 Private Conference Line
 -----------------------
+
+Many times during project assignements, you just need to get everyone on the
+same page. You can now have your own private conference line using the
+Conference noun and Dial verb. Put the following TwiML into your bin and save.
+Give your Twilio number to a few people around you. Have everyone call in and
+start up a conversation.
 
 .. code-block:: xml
 
