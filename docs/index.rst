@@ -4,10 +4,9 @@
 
    <h1 id="banner"><img src="_static/banner.png" alt="Welcome to H@B Twilio Workshop's documentation!"/></h1>
 
-Flask-SQLAlchemy is an extension for `Flask`_ that adds support for
-`SQLAlchemy`_ to your application.  It requires SQLAlchemy 0.6 or
-higher.  It aims to simplify using SQLAlchemy with Flask by providing
-useful defaults and extra helpers that make it easier to accomplish common
-tasks.
+Today we're going to learn how to use Twilio to build a simple but powerful SMS
+voting application. You'll be able to use this application the next time your
+friends or student group need to hold elections or decide whether to go to La
+Vals or Bongo Burger for lunch.
 
 .. include:: contents.rst.inc

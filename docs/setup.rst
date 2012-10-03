@@ -1,20 +1,10 @@
-.. _quickstart:
+.. _setup:
 
-Getting Started
-===============
+Initial Setup
+=============
 
 Before we can build a Twilio application, there are some steps you'll need to
 complete. This setup shouldn't take more than five minutes.
-
-Create a Twilio Account
------------------------
-
-First, `sign up`_ for a free Twilio account. You won't need a credit card, but
-you will need a phone number to prove your aren't a robot. Once you've signed
-up, you'll have your own Twilio phone number. We'll use this number for the
-rest of the workshop.
-
-.. _sign up: https://www.twilio.com/try-twilio
 
 Install a Text Editor
 ---------------------
