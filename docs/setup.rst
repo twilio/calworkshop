@@ -14,7 +14,7 @@ code. **If you already have a text-editor or IDE of choice, skip this section**.
 
 - Windows - Download and install `Notepad++`_
 - OS X - Download and install `Text Wrangler`_
-- Linux - Install ``gedit`` via your package manager
+- Linux - Install gedit via your package manager
 
 .. _Text Wrangler: http://www.barebones.com/products/textwrangler/
 .. _Notepad++: http://notepad-plus-plus.org/
@@ -22,11 +22,13 @@ code. **If you already have a text-editor or IDE of choice, skip this section**.
 Install Python
 --------------
 
-Open up a terminal or command prompt window and type the following::
+Open up a terminal or command prompt window and type the following
+
+.. code-block:: bash
 
    $ python --version
 
-If the output contains eiter ``Python 2.6.x`` or ``Python 2.7.x``, your Python
+If the output contains eiter Python 2.6.x or Python 2.7.x, your Python
 installation is ready to go. Some of you may have Python 3.x installed. Sadly,
 the twilio-python_ helper library only works with Python 2.6 or Python 2.7.
 
@@ -40,7 +42,9 @@ Find and download the installation for your operating system.
 More downloads are available on the `Python downloads <http://www.python.org/download/>`_ page.
 
 Once you are finished, opening up Terminal (OS X) or Powershell (Windows) and
-verify the output is now the same::
+verify the output is now the same
+
+.. code-block:: bash
 
    $ python --version
    Python 2.7.3
@@ -49,12 +53,16 @@ Download Workshop Materials
 ---------------------------
 
 Download the workshop materials as a zipfile_. You can also clone this
-repository if you have ``git`` installed.::
+repository if you have git installed.
+
+.. code-block:: bash
 
    $ git clone https://github.com/twilio/calworkshop.git
 
-To verify that everything is working correctly, run ``check.py`` and make sure
-the output matches below::
+To verify that everything is working correctly, run check.py and make sure
+the output matches below
+
+.. code-block:: bash
 
    $ cd calworkshop
    $ python check.py

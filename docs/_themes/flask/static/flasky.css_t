@@ -18,7 +18,8 @@ body {
     font-size: 17px;
     background-color: #f1f1f1;
     background-image: url('grid.png');
-    color: #000;
+    //color: #000;
+    color: rgb(65, 10, 20);
     margin: 0;
     padding: 0;
 }
@@ -47,7 +48,8 @@ hr {
  
 div.body {
     background-color: #ffffff;
-    color: #3E4349;
+    //color: #3E4349;
+    color: rgb(65, 10, 20);
     padding: 20px 30px 20px 30px;
 }
 
@@ -143,7 +145,7 @@ div.sphinxsidebar input {
  
 a {
     color: #FF0000;
-    text-decoration: underline;
+    text-decoration: none;
 }
  
 a:hover {
@@ -229,6 +231,7 @@ div.admonition p.last {
 }
 
 div.highlight {
+    color: #333;
     background-color: white;
 }
 
