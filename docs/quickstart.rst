@@ -25,7 +25,7 @@ end up at a screen that looks like this.
 .. image:: _static/testdrive.png
 
 This is your first chance to test out what Twilio can do. Send yourself a text
-message and recieve a call. Congratulations, you've used Twilio for the first
+message and receive a call. Congratulations, you've used Twilio for the first
 time!
 
 However, how would you do this from your own code? I'm glad you asked.
@@ -45,10 +45,10 @@ On the next line, set `TO_NUMBER` to the number you used to sign up
 with Twilio. During your free trial, you're only allowed to make calls and send
 messages to numbers you've verified.
 
-set `from_number` to your new twilio number. if you
+set `from_number` to your new Twilio number. if you
 can't remember it, check the `numbers
 <https://www.twilio.com/user/account/phone-numbers/incoming>`_ section of your
-account dashbouad.
+account dashboard.
 
 pick any message less than 140 characters to serve as the body.
 
@@ -94,7 +94,7 @@ Your phone should start ringing momentarily.
 Introduction to TwiML
 ---------------------
 
-We've successfuly made a phone ring, but how do we actually control call flow?
+We've successfully made a phone ring, but how do we actually control call flow?
 `TwiML <https://www.twilio.com/docs/api/twiml>`_ is the
 answer. TwiML is a set of instructions you can use to tell Twilio what to do
 when you receive an incoming call or SMS.
@@ -124,8 +124,8 @@ http://twimlets.com/message?Message[1]=Hello+World in your browser.
     <Response><Say>Hello World</Say></Response>
 
 This TwiML will do text-to-speech and say "Hello World". For outgoing calls, we
-choose the TwiML url at the time of the call. For incoming calls, we set a
-TwiML URL that is fetched everytime someone calls into our Twilio number.
+choose the TwiML URL at the time of the call. For incoming calls, we set a
+TwiML URL that is fetched every time someone calls into our Twilio number.
 
 Go to `your Twilio numbers page <https://www.twilio.com/user/account/phone-numbers/incoming>`_ and click on your phone number. Change the "Voice URL" field to the Hello World URL
 
@@ -144,7 +144,7 @@ easier, you can host your TwiML on `Twimlbin <http://twimlbin.com/>`_.
 
 To create a new bin, go to the Twimlbin homepage and click "Create a new
 Twimlbin". You can then use set your phone number's Voice URL to the "Public"
-url of your Twimlbin.
+URL of your Twimlbin.
 
 For the next sections, copy the sample TwiML and paste it into your Twimlbin
 for easy experimentation.
@@ -165,8 +165,8 @@ you've wired up this TwiML to your number, get a neighbor to test it out.
     </Resposne>
 
 
-Voicemail
----------
+Voice Mailbox
+-------------
 
 Recording audio is accomplished through the `Record`_ verb. The Record verb
 will play a beep and wait until a user presses # or hangs up. Copy this TwiML
@@ -189,7 +189,7 @@ message.
 Private Conference Line
 -----------------------
 
-Many times during project assignements, you just need to get everyone on the
+Many times during project assignments, you just need to get everyone on the
 same page. You can now have your own private conference line using the
 Conference noun and Dial verb. Put the following TwiML into your bin and save.
 Give your Twilio number to a few people around you. Have everyone call in and

@@ -3,8 +3,8 @@
 SMS Polling and Voting
 ======================
 
-Whether at a Hackathon or a student group meeting, you'll often need to vote on
-items. Elections, food, or nominations, all these situatins can be hanlded via
+Whether at a hackathon or a student group meeting, you'll often need to vote on
+items. Elections, food, or nominations, all these situations can be handled via
 SMS voting. 
 
 We'll create a simple Twilio application to record and report votes
@@ -55,7 +55,7 @@ should count for a single vote. We'll use a default dictionary to keep track of
 votes.
 
 A defaultdict is a regular dictionary, but with default values for the keys.
-For example, a regular dicionary will throw a KeyError if you access a key that
+For example, a regular dictionary will throw a KeyError if you access a key that
 doesn't exist.
 
 .. code-block:: python
@@ -118,7 +118,7 @@ the same option.
 Preventing Cheaters
 -------------------
 
-Cheaters never propser, and currently thet don't get caught either. Any person
+Cheaters never prosper, and currently they don't get caught either. Any person
 can vote any number of times. We'll keep track of every number that's voted,
 only allowing them a single vote. To do this, phone numbers will be added to a
 set and checked before each vote is tallied.

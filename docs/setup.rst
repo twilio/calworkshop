@@ -28,7 +28,7 @@ Open up a terminal or command prompt window and type the following
 
    $ python --version
 
-If the output contains eiter Python 2.6.x or Python 2.7.x, your Python
+If the output contains either Python 2.6.x or Python 2.7.x, your Python
 installation is ready to go. Some of you may have Python 3.x installed. Sadly,
 the twilio-python_ helper library only works with Python 2.6 or Python 2.7.
 
@@ -59,7 +59,7 @@ repository if you have git installed.
 
    $ git clone https://github.com/twilio/calworkshop.git
 
-To verify that everything is working correctly, run check.py and make sure
+To verify that everything is working correctly, run ``check.py`` and make sure
 the output matches below
 
 .. code-block:: bash

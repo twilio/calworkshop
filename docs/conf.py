@@ -26,7 +26,7 @@ sys.path.append(os.path.abspath('_themes'))
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = []
+extensions = [ 'sphinxcontrib.spelling' ]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -210,6 +210,9 @@ latex_documents = [
 
 # If false, no module index is generated.
 #latex_domain_indices = True
+
+# Spelling
+spelling_word_list_filename='wordlist.txt'
 
 
 # -- Options for manual page output --------------------------------------------
