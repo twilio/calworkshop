@@ -162,7 +162,7 @@ you've wired up this TwiML to your number, get a neighbor to test it out.
     <Response>
       <Say>Please wait while we forward your call</Say>
       <Dial>YOUR PHONE NUMBER</Dial>
-    </Resposne>
+    </Response>
 
 
 Voice Mailbox
@@ -178,7 +178,7 @@ into your bin and save. You can now leave messages on your number.
     <Response>
       <Say>After the beep, record your message</Say>
       <Record/>
-    </Resposne>
+    </Response>
 
 After you're done recording your message, hang up. Twilio begins processing the
 recording right after your done. Head to your `recording log
@@ -202,7 +202,7 @@ start up a conversation.
       <Dial>
         <Conference>vip</Conference>
       </Dial>
-    </Resposne>
+    </Response>
 
 
 Swiss-Army Phone Number
