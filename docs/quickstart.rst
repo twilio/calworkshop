@@ -200,9 +200,13 @@ start up a conversation.
     <?xml version="1.0" encoding="UTF-8"?>
     <Response>
       <Dial>
-        <Conference>vip</Conference>
+        <Conference>my-conference-room</Conference>
       </Dial>
     </Response>
+
+The text inside the Conference element is the conference room name. Since the
+name stays the for every phone call, all participants end up in the same
+conference.
 
 
 Swiss-Army Phone Number

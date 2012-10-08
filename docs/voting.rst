@@ -32,17 +32,24 @@ To see all the votes, we'll use a simple Python script and the `twilio-python
    for msg in client.sms.messages.iter():
        print msg.body
 
+The `iter` function efficiently fetches all you SMS messages via the Twilio
+REST API. Under the covers, the function fetches pages of the `SMS
+Messages list resource <http://www.twilio.com/docs/api/rest/sms#list>`_ as they
+are needed.
+
 However, this script will fail if you have multiple Twilio phone numbers. To
 fix this, we'll filter messages based on the phone number they were sent to.
 
 .. code-block:: python
-   :emphasize-lines: 5
+   :emphasize-lines: 3, 7
 
    from twilio.rest import TwilioRestClient
 
+   TWILIO_PHONE_NUMBER = "(999) 999 - 9999"
+
    client = TwilioRestClient("ACCOUNT_SID", "AUTH_TOKEN")
 
-   for msg in client.sms.messages.iter(to="TWILIO PHONE NUMBER"):
+   for msg in client.sms.messages.iter(to=TWILIO_PHONE_NUMBER):
        print msg.body
 
 Still, we're only seeing the contents of the messages.
@@ -79,16 +86,18 @@ Instead of just printing the message body, we now use the message body as a key
 for the vote dictionary.
 
 .. code-block:: python
-   :emphasize-lines: 2,4,7,8-
+   :emphasize-lines: 2,6,10-
 
    from twilio.rest import TwilioRestClient
    from collections import defaultdict
+
+   TWILIO_PHONE_NUMBER = "(999) 999 - 9999"
 
    votes = defaultdict(int)
 
    client = TwilioRestClient("ACCOUNT_SID", "AUTH_TOKEN")
 
-   for msg in client.sms.messages.iter(to="TWILIO PHONE NUMBER"):
+   for msg in client.sms.messages.iter(to=TWILIO_PHONE_NUMBER):
        votes[msg.body] += 1
 
    for vote, total in votes.items():
@@ -99,16 +108,18 @@ and ``Foo``. Let's normalize the message bodies so that similar votes count for
 the same option.
 
 .. code-block:: python
-   :emphasize-lines: 9
+   :emphasize-lines: 11
 
    from twilio.rest import TwilioRestClient
    from collections import defaultdict
+
+   TWILIO_PHONE_NUMBER = "(999) 999 - 9999"
 
    votes = defaultdict(int)
 
    client = TwilioRestClient("ACCOUNT_SID", "AUTH_TOKEN")
 
-   for msg in client.sms.messages.iter(to="TWILIO PHONE NUMBER"):
+   for msg in client.sms.messages.iter(to=TWILIO_PHONE_NUMBER):
        votes[msg.body.upper()] += 1
 
    for vote, total in votes.items():
@@ -125,17 +136,19 @@ set and checked before each vote is tallied.
 
 
 .. code-block:: python
-   :emphasize-lines: 5,10,11,14
+   :emphasize-lines: 7,12,13,16
 
    from twilio.rest import TwilioRestClient
    from collections import defaultdict
+
+   TWILIO_PHONE_NUMBER = "(999) 999 - 9999"
 
    votes = defaultdict(int)
    voted = set()
 
    client = TwilioRestClient("ACCOUNT_SID", "AUTH_TOKEN")
 
-   for msg in client.sms.messages.iter(to="TWILIO PHONE NUMBER"):
+   for msg in client.sms.messages.iter(to=TWILIO_PHONE_NUMBER):
        if msg.from_ in voted:
            continue
 
@@ -155,18 +168,20 @@ previous section and make some pretty graphs. We'll use the `Google Graph API
 simplicity and price (free).
 
 .. code-block:: python
-   :emphasize-lines: 1,17-
+   :emphasize-lines: 1,19-
 
    import urllib
    from twilio.rest import TwilioRestClient
    from collections import defaultdict
+
+   TWILIO_PHONE_NUMBER = "(999) 999 - 9999"
 
    votes = defaultdict(int)
    voted = set()
 
    client = TwilioRestClient("ACCOUNT_SID", "AUTH_TOKEN")
 
-   for msg in client.sms.messages.iter(to="TWILIO PHONE NUMBER"):
+   for msg in client.sms.messages.iter(to=TWILIO_PHONE_NUMBER):
        if msg.from_ in voted:
            continue
 
