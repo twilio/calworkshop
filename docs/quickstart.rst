@@ -41,16 +41,16 @@ the top of your Twilio account dashboard <https://www.twilio.com/user/account>`_
 .. literalinclude:: ../send_sms.py
    :lines: 1-4
 
-On the next line, set `TO_NUMBER` to the number you used to sign up
+On the next line, set ``TO_NUMBER`` to the number you used to sign up
 with Twilio. During your free trial, you're only allowed to make calls and send
 messages to numbers you've verified.
 
-set `from_number` to your new Twilio number. if you
+Set ``FROM_NUMBER`` to your new Twilio number. If you
 can't remember it, check the `numbers
 <https://www.twilio.com/user/account/phone-numbers/incoming>`_ section of your
 account dashboard.
 
-pick any message less than 140 characters to serve as the body.
+Pick any message less than 140 characters to serve as the body.
 
 .. literalinclude:: ../send_sms.py
    :lines: 6-8
@@ -76,8 +76,8 @@ It's time to make a call to your phone using the REST API.
 Open ``make_call.py`` in your text editor and, just like the last section,
 fill in your account credentials and phone numbers details.
 
-With the above information, we construct a Twilio REST API client and create a
-new call.
+Again, we construct a Twilio REST API client, but this time, we create a
+new call with it.
 
 .. literalinclude:: ../make_call.py
    :lines: 8-
@@ -116,7 +116,7 @@ TwiML is an XML-based language and consists of five basic verbs.
 To see how these verbs work, let's take a look at the last section. When we
 called your phone, a robot answered with a "Hello World" message. We now know
 that TwiML powered that call, so let's take a look. Open
-http://twimlets.com/message?Message[1]=Hello+World in your browser.
+http://twimlets.com/message?Message=Hello+World in your browser.
 
 .. code-block:: xml
 
@@ -131,7 +131,7 @@ Go to `your Twilio numbers page <https://www.twilio.com/user/account/phone-numbe
 
 .. code-block:: bash
 
-    http://twimlets.com/message?Message[1]=Hello+World
+    http://twimlets.com/message?Message=Hello+World
 
 Now when you call your number, you should hear a "Hello World" greeting.
 
@@ -214,9 +214,9 @@ Swiss-Army Phone Number
 
 Equipped with the knowledge of TwiML, you can now bend your Twilio phone number
 to your will. You've forwarded a call, recorded a message, and started a
-private conference line. Your phone is now your's to control.
+private conference line. Your phone is now yours to control.
 
-But don't think we're done yet, our second act will be creating application for
+But don't think we're done yet, our second act will be creating an application for
 :ref:`voting`.
 
 

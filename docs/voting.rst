@@ -4,7 +4,7 @@ SMS Polling and Voting
 ======================
 
 Whether at a hackathon or a student group meeting, you'll often need to vote on
-items. Elections, food, or nominations, all these situations can be handled via
+items. Elections, food, or nominations - all these situations can be handled via
 SMS voting. 
 
 We'll create a simple Twilio application to record and report votes
@@ -32,7 +32,7 @@ To see all the votes, we'll use a simple Python script and the `twilio-python
    for msg in client.sms.messages.iter():
        print msg.body
 
-The `iter` function efficiently fetches all you SMS messages via the Twilio
+The ``iter`` function efficiently fetches all your SMS messages via the Twilio
 REST API. Under the covers, the function fetches pages of the `SMS
 Messages list resource <http://www.twilio.com/docs/api/rest/sms#list>`_ as they
 are needed.
@@ -61,8 +61,8 @@ In our election, participants can only vote once. Therefore, each message
 should count for a single vote. We'll use a default dictionary to keep track of
 votes.
 
-A defaultdict is a regular dictionary, but with default values for the keys.
-For example, a regular dictionary will throw a KeyError if you access a key that
+A Python ``defaultdict`` is a regular dictionary, but with default values for the keys.
+For example, a regular dictionary will throw a ``KeyError`` if you access a key that
 doesn't exist.
 
 .. code-block:: python
@@ -73,7 +73,7 @@ doesn't exist.
       File "<stdin>", line 1, in <module>
     KeyError: 'hey'
 
-A defaultdict will instead return the default value for the type of object it
+A ``defaultdict`` will instead return the default value for the type of object it
 contains.
 
 .. code-block:: python
@@ -103,9 +103,9 @@ for the vote dictionary.
    for vote, total in votes.items():
        print "{} {}".format(vote, total)
 
-We can now see tallies. However, this code is very brittle. Votes for ``foo``
-and ``Foo``. Let's normalize the message bodies so that similar votes count for
-the same option.
+We can now see tallies for each vote. However, this code is very brittle. 
+Let's normalize the message bodies so that similar votes (like for ``foo``
+and ``Foo``) count for the same option.
 
 .. code-block:: python
    :emphasize-lines: 11
@@ -203,6 +203,6 @@ simplicity and price (free).
 Existing Solutions
 ------------------
 
-`Wedgies <http://wedgies.com/>`_ is a very similar concept build on top of
+`Wedgies <http://wedgies.com/>`_ is a very similar concept built on top of
 Twilio, but questions are limited to two answers. Great for simple surveys, but
 not for elections.
