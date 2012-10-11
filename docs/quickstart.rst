@@ -41,11 +41,11 @@ the top of your Twilio account dashboard <https://www.twilio.com/user/account>`_
 .. literalinclude:: ../send_sms.py
    :lines: 1-4
 
-On the next line, set `TO_NUMBER` to the number you used to sign up
+On the next line, set ``TO_NUMBER`` to the number you used to sign up
 with Twilio. During your free trial, you're only allowed to make calls and send
 messages to numbers you've verified.
 
-Set `from_number` to your new Twilio number. If you
+Set ``FROM_NUMBER`` to your new Twilio number. If you
 can't remember it, check the `numbers
 <https://www.twilio.com/user/account/phone-numbers/incoming>`_ section of your
 account dashboard.
