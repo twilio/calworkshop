@@ -203,6 +203,6 @@ simplicity and price (free).
 Existing Solutions
 ------------------
 
-`Wedgies <http://wedgies.com/>`_ is a very similar concept built on top of
-Twilio, but questions are limited to two answers. Great for simple surveys, but
-not for elections.
+`Wedgies <http://wedgies.com/>`_ is a very similar concept built on top of Twilio
+that provides quite a few cool features beyond basic SMS polling, like Twitter
+polls, embedded polls, and realtime results.
